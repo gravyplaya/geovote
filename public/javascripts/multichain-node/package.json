@@ -1,0 +1,84 @@
+{
+  "_args": [
+    [
+      "multichain-node",
+      "/Users/geo/workspace/geovote"
+    ]
+  ],
+  "_from": "multichain-node@latest",
+  "_id": "multichain-node@1.7.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/multichain-node",
+  "_nodeVersion": "5.5.0",
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/multichain-node-1.7.0.tgz_1463437812302_0.3360680371988565"
+  },
+  "_npmUser": {
+    "email": "greg.piccolo@gmail.com",
+    "name": "scoin"
+  },
+  "_npmVersion": "3.3.12",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "multichain-node",
+    "raw": "multichain-node",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/multichain-node/-/multichain-node-1.7.0.tgz",
+  "_shasum": "5df1479145f5324d088d342b59d9d9415d444df5",
+  "_shrinkwrap": null,
+  "_spec": "multichain-node",
+  "_where": "/Users/geo/workspace/geovote",
+  "author": {
+    "name": "Greg Piccolo"
+  },
+  "bugs": {
+    "url": "https://github.com/scoin/multichain-node/issues"
+  },
+  "dependencies": {},
+  "description": "A wrapper for the Multichain JSON-RPC api that parses your input.",
+  "devDependencies": {
+    "bluebird": "^3.3.3"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "5df1479145f5324d088d342b59d9d9415d444df5",
+    "tarball": "https://registry.npmjs.org/multichain-node/-/multichain-node-1.7.0.tgz"
+  },
+  "gitHead": "dbb3b69ab49f9dbbcc5c71ad3bd77ad5cc408df6",
+  "homepage": "https://github.com/scoin/multichain-node#readme",
+  "keywords": [
+    "blockchain",
+    "multichain",
+    "bitcoin",
+    "rpc"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "email": "greg.piccolo@gmail.com",
+      "name": "scoin"
+    }
+  ],
+  "name": "multichain-node",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scoin/multichain-node.git"
+  },
+  "scripts": {
+    "test": "./test/run"
+  },
+  "version": "1.7.0"
+}

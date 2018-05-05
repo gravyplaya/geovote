@@ -1,0 +1,88 @@
+<h1>{{title}}</h1>
+<h2>The process</h2>
+<br />Each candidate has a blockchain address, which starts out holding only receipts.
+<br />  As voting progresses, the candidates' accounts trade receipts for tokens. The number of tokens is the number of votes each candidate has received.
+<br />  Candidate addresses only have recieve permissions
+<br />Voter is verified by 3rd party and given a id-token(encrypted username) to use as a local id on the site. that id-token is stored with the voter address. if the voter needs to be verified we can check with the 3rd party.
+<br />Voter will use their address to receive a token, and then to perform a transaction trading the token for a receipt from your chosen candidate.
+<br />We don't want Voters sending tokens to one another, so we don't want the Voters to have receive permission all the time.
+<br />So the Voter is granted receive permission just long enough to receive 1 token, and then revoke it.
+<br />Viewing election results just look at the amount of tokens each candidate has.
+<div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <p>Click here to get a new voter address <button onclick="getnewaddy();" class="btn btn-primary">Get new address</button><br />
+            Your new address: <span id="mynewaddy"></span></p>
+
+            <currentaddresses></currentaddresses>
+
+        </div>
+        <div class="col-md-4">
+            <form>
+                <div class="form-group"><h2>Send a new voter a voting token</h2>
+                    <label for="exampleInputEmail1">voter address</label>
+                    <input type="text" class="form-control" id="voterAddress" placeholder="Voter address to send token to">
+                    <button type="button" class="btn btn-primary" onclick="sendTokenToVoter();">Send Token</button>
+                    <p id="sendTokenStatus"></p>
+                </div>
+                <hr />
+                <div class="form-group"><h2>Token Balance Checker</h2>
+                    <label for="exampleInputEmail1">Voter or Candidate address</label>
+                    <input type="text" class="form-control" id="checkerAddress" placeholder="Voter/Candidate address to get taken balance">
+                    <button type="button" class="btn btn-primary" onclick="getTokenBalance();">Check Balance</button>
+                    <p id="tokenBalance"></p>
+                </div>
+                <div class="form-group"><h2>Voting Booth</h2>
+                    <p>Given the 2 candidates: 1MCUxo4Dv2B2yE861TXxoLZyAC1JbZtodTVBWg and 1QzS7XcfAh56T4uzowr3Bw9poNT9oZhcUqpCvL</p>
+                    <p>Please vote using an available vote token by entering your voter address and clicking vote. You can check your vote token balance above</p>
+                    <label for="fromAddress">Voter address</label>
+                    <input type="text" class="form-control" id="fromAddress" placeholder="Voter address casting vote">
+                    <label for="toAddress">Candidate address</label>
+                    <select class="form-control" id="toAddress">
+                        <option>1MCUxo4Dv2B2yE861TXxoLZyAC1JbZtodTVBWg</option>
+                        <option>1QzS7XcfAh56T4uzowr3Bw9poNT9oZhcUqpCvL</option>
+                    </select>
+                    <!--<input type="text" class="form-control" id="toAddress" placeholder="Candidate address you wish to vote for">-->
+                    <button type="button" class="btn btn-primary" onclick="vote();">Vote</button>
+                    <p id="voteResults"></p>
+                </div>
+
+            </form>
+
+
+        </div>
+        <div class="col-md-4">
+            <div id="signin-btn" class="btn btn-success btn-block">Register To Vote<br /> <span onclick="login('sms')">SMS</span> | <span onclick="login('email')">Email</span></div>
+            <!-- We'll also add the ability to logout as well as provide some additional
+                 user info once a user is logged in -->
+            <div class="col-sm-8 col-sm-offset-2">
+                <div id="contribute">contribute</div>
+                <div class="clearfix top-bar">
+                    <div id="email" class="pull-left"></div>
+                    <div class="pull-right">
+                        <a onclick="logout()" class="btn btn-danger" id="logout-btn">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<script>
+    $(function(){
+
+
+    });
+
+</script>
+<script src="//cdn.auth0.com/js/lock-passwordless-1.0.min.js"></script>
+<script src="//cdn.auth0.com/w2/auth0-6.7.js"></script>
+<script src="//www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+<script src="/javascripts/authy.js"></script>
+
+
+<script type="riot/tag" src="/tags/currentassets.tag"></script>
+<script type="riot/tag" src="/tags/currentaddresses.tag"></script>

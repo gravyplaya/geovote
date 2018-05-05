@@ -1,0 +1,45 @@
+** on maybeitshere machine **
+1E7GZ9p5DBX63qcRaqAwzuCeZ92drXnkgdtyGp
+multichain-util create chain1
+
+MultiChain 1.0.1 Utilities (protocol 10009)
+
+Blockchain parameter set was successfully generated.
+You can edit it in /home/gravyplaya/.multichain/chain1/params.dat before running multichaind for the first time.
+
+To generate blockchain please run "multichaind chain1 -daemon".
+
+MultiChain server starting
+Looking for genesis block...
+Genesis block found
+
+Other nodes can connect to this node using:
+multichaind chain1@10.240.244.123:7325
+		external = chain1@146.148.38.242:7325
+
+Node started
+
+-- from second server -- blkflix machine
+189MD9zo3C6daV4xzFSdtwaHFGupKJCupJWy1j
+multichaind chain1@10.240.244.123:7325
+					107.178.208.71
+MultiChain 1.0.1 Daemon (protocol 10009)
+
+Retrieving blockchain parameters from the seed node 10.240.244.123:7325 ...
+Blockchain successfully initialized.
+
+Please ask blockchain admin or user having activate permission to let you connect and/or transact:
+multichain-cli chain1 grant 189MD9zo3C6daV4xzFSdtwaHFGupKJCupJWy1j connect
+multichain-cli chain1 grant 189MD9zo3C6daV4xzFSdtwaHFGupKJCupJWy1j connect,send,receive
+
+-- then also on second server; connect to first
+multichaind chain1 -daemon
+
+MultiChain 1.0.1 Daemon (protocol 10009)
+
+MultiChain server starting
+Retrieving blockchain parameters from the seed node 10.240.244.123:7325 ...
+Other nodes can connect to this node using:
+multichaind chain1@10.240.132.189:7325
+
+Node started

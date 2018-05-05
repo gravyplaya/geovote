@@ -1,0 +1,24 @@
+<h1>{{title}}</h1>
+<h2>The process</h2>
+<br />Each candidate has a blockchain address, which starts out holding only receipts.
+<br />  As voting progresses, the candidates' accounts trade receipts for tokens. The number of tokens is the number of votes each candidate has received.
+<br />  Candidate addresses only have recieve permissions
+<br />Voter is verified by 3rd party and given a id-token(encrypted username) to use as a local id on the site. that id-token is stored with the voter address. if the voter needs to be verified we can check with the 3rd party.
+<br />Voter will use their address to receive a token, and then to perform a transaction trading the token for a receipt from your chosen candidate.
+<br />We don't want Voters sending tokens to one another, so we don't want the Voters to have receive permission all the time.
+<br />So the Voter is granted receive permission just long enough to receive 1 token, and then revoke it.
+<br />Viewing election results just look at the amount of tokens each candidate has.
+<div>
+    <p> <a href="/voterdemo">Voter Demo</a></p>
+   <p> <a href="/voteadmin">Voter Admin</a></p>
+
+
+</div>
+
+<script>
+    $(function(){
+
+    });
+
+</script>
+
